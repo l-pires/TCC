@@ -33,7 +33,7 @@ def get_face(gray:cv2.Mat):
     return gray[y0:y0 + h0, x0:x0 + w0]
 
 
-def save_fig(imgs:tuple[cv2.Mat], path:str=None):
+def save_fig(imgs:'tuple[cv2.Mat]', path:str=None):
     """
     Salva as imagens passadas em uma figura no caminho informado.
     Imagens: (Imagem original, imagem monocromática, imagem da 
@@ -64,7 +64,7 @@ def save_fig(imgs:tuple[cv2.Mat], path:str=None):
     plt.close()
 
 
-def reflection_detect(img:cv2.Mat, threshold:int=222) -> tuple[int, tuple[cv2.Mat]]:
+def reflection_detect(img:cv2.Mat, threshold:int=222) -> 'tuple[int, tuple[cv2.Mat]]':
     """
     A partir da imagem recebida, executa a rotina de detecção de reflexão,
     passando pela detecção facial, suavização da imagem, e binarização de
